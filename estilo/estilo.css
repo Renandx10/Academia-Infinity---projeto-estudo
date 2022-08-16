@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fundo da tela */
+
+html {
+    width: 100vw;
+    height: 100vh;
+    color: white;
+    font-size: 62.5%;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    background: linear-gradient(rgba(17, 17, 17, 0.8), rgba(20, 20, 20, 1)), url(/img/img5.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-position-y: 0px;
+    background-repeat: no-repeat;
+}
+
+/* header - logo - navegador */
+
+.container-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 1.8rem;
+    height: 100%;
+    text-transform: uppercase;
+    padding-top: 25px;
+}
+
+.logo {
+    font-size: 1.8rem;
+    letter-spacing: 0.4rem;
+    cursor: pointer;
+}
+
+.lista-itens {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+    font-size: 1,5rem;
+}
+
+.lista-itens a {
+    color: white;
+    text-decoration: none;
+    padding: 1.5rem;
+    transition: 2ms ease-in;
+    position: relative;
+}
+
+.lista-itens a::before {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 0px;
+    height: 1px;
+    background-color: white;
+   transition: all 1.5s ease;
+}
+
+.lista-itens a:hover::before {
+    width: 100%;
+}
+
+/* mexer na main agora */
+
+main {
+    height: 93vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* conteudo de texto */
+
+.texto-principal {
+    width: 850px;
+    font-size: 5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    
+}
+
+.texto-segundario {
+    margin-bottom: 7rem;
+    font-size: 2rem;
+    color: rgb(165,165,165);
+    text-transform: uppercase;
+}
+
+/* botões */
+
+.botoes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.botoes button {
+    width: 250px;
+    height: 60px;
+    cursor: pointer;
+    border: 1px solid white;
+    color: white;
+    text-transform: uppercase;
+    background-color: transparent;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+    border-radius: 20px;
+    position: relative;
+    transition: 1.5s;
+}
+
+.botoes button:hover {
+    color: rgb(251,255,0);
+    border: none;
+}
+
+.botoes button::before {
+    content: '';
+    border-radius: 20px;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 0;
+    height: 60px;
+    background-color: rgb(61,61,61);
+    z-index: -1;
+    transition: 1s;
+}
+
+.botoes button:hover::before {
+    width: 100%;
+}
